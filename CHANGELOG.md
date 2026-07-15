@@ -2,12 +2,14 @@
 
 ## Sprint 4 - Home Journey
 
-Added Home Journey component
+### Added
+- Home Journey component
+- JourneyStep component
+- Current Decision card
+- Home Overview section
+- Dynamic Home Detail improvements
 
-Added JourneyStep component
-
-Added Current Decision card
-
-Improved Home Detail page
-
-Created UI Polish backlog
+### Changed
+- Improved Home Detail page layout
+- Added visual journey timeline
+- Added UI Polish backlog to ARCHITECTURE.md
