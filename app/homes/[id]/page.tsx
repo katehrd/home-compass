@@ -1,3 +1,4 @@
+import HomeJourney from "@/components/home/HomeJourney";
 import { homes } from "@/data/homes";
 import StatusBadge from "@/components/shared/StatusBadge";
 
@@ -115,16 +116,23 @@ export default async function HomeDetailPage({
 
   </div>
 </div>
+<div className="mt-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
 
-      <div className="mt-8 rounded-xl border bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-semibold">
-          Home Journey
-        </h2>
+  <h2 className="text-xl font-semibold">
+    Current Decision
+  </h2>
 
-        <p className="mt-3 text-slate-500">
-          Coming in Sprint 4...
-        </p>
-      </div>
+  <p className="mt-3 text-lg font-medium">
+    Is this home worth pursuing further?
+  </p>
+
+  <p className="mt-2 text-slate-600">
+    Current stage: Evaluate Home
+  </p>
+
+</div>
+
+     <HomeJourney />
 
       <div className="mt-8 rounded-xl border bg-white p-6 shadow-sm">
         <h2 className="text-xl font-semibold">

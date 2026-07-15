@@ -246,3 +246,13 @@ Future capabilities may include:
 * Commute analysis
 
 Every future feature should support the mission of helping families make confident home-buying decisions.
+
+---
+
+# UI-Polish
+
+* Tighten journey spacing.
+* Improve the connector line.
+* Highlight the current step.
+* Make "Current Decision" dynamic.
+* Remove redundant "Completed" labels.
