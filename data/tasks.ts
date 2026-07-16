@@ -1,0 +1,58 @@
+import { Task } from "@/types/task";
+
+export const tasks: Task[] = [
+  {
+  id: "review-northfield",
+  homeId: "56-northfield",
+  title: "Review listing",
+  stepId: "review",
+  status: "Completed",
+  owner: "Kate",
+  priority: "Medium",
+  notes: "Reviewed photos and disclosures.",
+  completedDate: new Date("2026-07-10"),
+},
+{
+  id: "tour-crawford",
+  homeId: "69-crawford",
+  title: "Tour Home",
+  stepId: "tour",
+  status: "Not Started",
+  owner: "Dan",
+  priority: "High",
+  notes: "No upcoming open houses. Need to schedule a private tour.",
+  dueDate: new Date("2026-07-14"),
+},
+{
+  id: "drive-broadfield",
+  homeId: "275-broadfield",
+  title: "Drive Neighborhood",
+  stepId: "drive",
+  status: "Waiting",
+  owner: "Kate",
+  priority: "Medium",
+  notes: "Need to drive through the neighborhood to get a feel for the area.",
+  dueDate: new Date("2026-07-20"),
+},
+{
+  id: "realtor-wilmot",
+  homeId: "50-wilmot",
+  title: "Call Realtor",
+  stepId: "realtor",
+  status: "In Progress",
+  owner: "Kate",
+  priority: "High",
+  notes: "Need to call the assigned realtor to discuss the property.",
+  dueDate: new Date("2026-07-23"),
+},
+{
+  id: "review-meadow",
+  homeId: "46-meadow",
+  title: "Review listing",
+  stepId: "review",
+  status: "Not Started",
+  owner: "Kate",
+  priority: "High",
+  notes: "New listing. Determine whether it's worth driving the neighborhood.",
+}
+];
