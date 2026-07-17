@@ -1,8 +1,14 @@
-import { tasks } from "@/data/tasks";
+"use client";
+
+import { useState } from "react";
+import { tasks as initialTasks } from "@/data/tasks";
+import { TaskStatus } from "@/types/task";
 import ActionCard from "./ActionCard";
 import { homes } from "@/data/homes";
 
 export default function TodaysPriorities() {
+const [tasks, setTasks] = useState(initialTasks);
+
   const priorities = tasks.filter(
   (task) =>
     task.priority === "High" &&
@@ -29,10 +35,22 @@ export default function TodaysPriorities() {
 
   return (
     <ActionCard
-      key={task.id}
-      home={home}
-      task={task}
-    />
+  key={task.id}
+  home={home}
+  task={task}
+  onStatusChange={(status: TaskStatus) => {
+  setTasks((currentTasks) =>
+    currentTasks.map((currentTask) =>
+      currentTask.id === task.id
+        ? {
+            ...currentTask,
+            status,
+          }
+        : currentTask
+    )
+  );
+}}
+/>
   );
 })}
       </div>

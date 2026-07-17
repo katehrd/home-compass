@@ -1,15 +1,19 @@
+"use client";
 import StatusBadge from "@/components/shared/StatusBadge";
 import { Property } from "@/types/property";
 import { Task } from "@/types/task";
+import TaskStatusSelect from "@/components/tasks/TaskStatusSelect";
 
 interface ActionCardProps {
   home: Property;
   task: Task;
+  onStatusChange: (status: Task["status"]) => void;
 }
 
 export default function ActionCard({
   home,
   task,
+  onStatusChange,
 }: ActionCardProps) {
   return (
     <div className="rounded-xl border bg-white p-5 shadow-sm">
@@ -22,8 +26,11 @@ export default function ActionCard({
       </h3>
 
       <div className="mt-3">
-        <StatusBadge status={home.status} />
-      </div>
+  <TaskStatusSelect
+  value={task.status}
+  onChange={onStatusChange}
+/>
+</div>
     </div>
   );
 }
