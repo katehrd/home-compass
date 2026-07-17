@@ -1,10 +1,13 @@
+import { tasks } from "@/data/tasks";
 import ActionCard from "./ActionCard";
 import { homes } from "@/data/homes";
 
 export default function TodaysPriorities() {
-  const priorities = homes.filter(
-    (home) => home.nextAction
-  );
+  const priorities = tasks.filter(
+  (task) =>
+    task.priority === "High" &&
+    task.status !== "Completed"
+);
 
   return (
     <section className="mb-10">
@@ -17,12 +20,21 @@ export default function TodaysPriorities() {
 </p>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {priorities.map((home) => (
-          <ActionCard
-            key={home.id}
-            home={home}
-          />
-        ))}
+        {priorities.map((task) => {
+  const home = homes.find(
+    (home) => home.id === task.homeId
+  );
+
+  if (!home) return null;
+
+  return (
+    <ActionCard
+      key={task.id}
+      home={home}
+      task={task}
+    />
+  );
+})}
       </div>
     </section>
   );

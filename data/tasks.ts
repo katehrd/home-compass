@@ -46,8 +46,8 @@ export const tasks: Task[] = [
   dueDate: new Date("2026-07-23"),
 },
 {
-  id: "review-meadow",
-  homeId: "46-meadow",
+  id: "review-cherry",
+  homeId: "10-cherry",
   title: "Review listing",
   stepId: "review",
   status: "Not Started",

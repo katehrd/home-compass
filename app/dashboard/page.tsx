@@ -1,3 +1,4 @@
+import { tasks } from "@/data/tasks";
 import TodaysPriorities from "@/components/dashboard/TodaysPriorities";
 import StatCard from "@/components/dashboard/StatCard";
 import { homes } from "@/data/homes";
@@ -18,6 +19,12 @@ export default function DashboardPage() {
       (sum, home) => sum + home.score,
       0
     ) / homesReviewed;
+
+  const priorityTasks = tasks.filter(
+  (task) =>
+    task.priority === "High" &&
+    task.status !== "Completed"
+);
 
   return (
     <div>

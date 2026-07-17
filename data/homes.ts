@@ -12,7 +12,6 @@ export const homes: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     squareFeet: 2500,
-    nextAction: "Schedule second tour",
   },
   {
     id: "275-broadfield",
@@ -37,7 +36,6 @@ export const homes: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     squareFeet: 2700,
-    nextAction: "Monitor price reduction",
   },
   {
     id: "56-northfield",
@@ -62,7 +60,6 @@ export const homes: Property[] = [
     bedrooms: 4,
     bathrooms: 2,
     squareFeet: 2300,
-    nextAction: "Schedule first tour",
   },
   {
     id: "457-quaker-ridge",
