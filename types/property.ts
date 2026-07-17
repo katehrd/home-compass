@@ -30,6 +30,4 @@ export interface Property {
   notes?: string;
 
   zillowUrl?: string;
-
-  nextAction?: string;
 }

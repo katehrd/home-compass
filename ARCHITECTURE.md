@@ -256,3 +256,11 @@ Every future feature should support the mission of helping families make confide
 * Highlight the current step.
 * Make "Current Decision" dynamic.
 * Remove redundant "Completed" labels.
+
+### Date Convention
+
+Calendar dates (e.g. task due dates) should be created with:
+
+new Date(year, monthIndex, day)
+
+instead of ISO date strings to avoid UTC timezone shifts.
