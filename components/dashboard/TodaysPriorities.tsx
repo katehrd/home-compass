@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { tasks as initialTasks } from "@/data/tasks";
+import { useTasks } from "@/context/TaskContext";
 import { TaskStatus } from "@/types/task";
 import ActionCard from "./ActionCard";
 import { homes } from "@/data/homes";
 
 export default function TodaysPriorities() {
-const [tasks, setTasks] = useState(initialTasks);
+const { tasks, updateTaskStatus } = useTasks();
 
   const priorities = tasks.filter(
   (task) =>
@@ -39,16 +38,7 @@ const [tasks, setTasks] = useState(initialTasks);
   home={home}
   task={task}
   onStatusChange={(status: TaskStatus) => {
-  setTasks((currentTasks) =>
-    currentTasks.map((currentTask) =>
-      currentTask.id === task.id
-        ? {
-            ...currentTask,
-            status,
-          }
-        : currentTask
-    )
-  );
+  updateTaskStatus(task.id, status);
 }}
 />
   );

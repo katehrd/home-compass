@@ -42,3 +42,19 @@
 
 ### Architecture
 - Separated Home, Task, and Journey into distinct domain models
+
+
+## Sprint 6 - Interactive Tasks
+
+### Added
+- Created reusable `TaskStatusSelect` component
+- Introduced interactive task status dropdowns on Dashboard action cards
+- Added client-side task state using React `useState`
+
+### Changed
+- Action Cards now support interactive status updates
+- Refactored Dashboard task flow to lift task state into `TodaysPriorities`
+- Established client/server component boundaries for task interactions
+
+### Fixed
+- Corrected task due date handling to avoid JavaScript timezone shifts when creating calendar dates
