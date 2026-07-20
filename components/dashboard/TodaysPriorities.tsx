@@ -17,7 +17,7 @@ const { tasks, updateTaskStatus } = useTasks();
   return (
     <section className="mb-10">
       <h2 className="mb-4 text-2xl font-bold">
-        Today's Priorities
+        Today&apos;s Priorities
       </h2>
 
       <p className="mb-6 text-slate-600">

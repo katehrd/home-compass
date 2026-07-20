@@ -58,3 +58,28 @@
 
 ### Fixed
 - Corrected task due date handling to avoid JavaScript timezone shifts when creating calendar dates
+
+## Sprint 6 - Shared Task State
+
+### Added
+- Added `TaskContext` to centralize task state across the application
+- Added `TaskProvider` at the application root
+- Added reusable `useTasks()` hook for accessing and updating tasks
+
+### Changed
+- Refactored Dashboard to use shared task state instead of local `useState`
+- Moved task status update logic into `TaskContext`
+- Established a single source of truth for task state
+
+### Behavior
+- Task status now persists while navigating between pages during a session
+- Task state is shared across the application (client-side)
+- Task state still resets on browser refresh until persistence is added
+
+### Added
+- Home Detail page now uses shared task state through `TaskContext`
+- Added interactive task status updates to the Home Detail page
+
+### Changed
+- Moved task rendering into reusable `HomeTaskPanel`
+- Removed duplicate task lookup logic from `HomeDetailPage`

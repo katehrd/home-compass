@@ -1,4 +1,4 @@
-import { tasks } from "@/data/tasks";
+import HomeTaskPanel from "@/components/home/HomeTaskPanel";
 import HomeJourney from "@/components/home/HomeJourney";
 import { homes } from "@/data/homes";
 import StatusBadge from "@/components/shared/StatusBadge";
@@ -11,16 +11,6 @@ export default async function HomeDetailPage({
   const { id } = await params;
 
   const home = homes.find((home) => home.id === id);
-
-  const homeTasks = tasks.filter(
-  (task) => task.homeId === id
-);
-
-  const highPriorityTask = homeTasks.find(
-  (task) =>
-    task.priority === "High" &&
-    task.status !== "Completed"
-);
 
   if (!home) {
     return (
@@ -54,37 +44,7 @@ export default async function HomeDetailPage({
 
 </div>
 
-      <div className="mt-8 rounded-xl border bg-white p-6 shadow-sm">
-        <h2 className="text-xl font-semibold">
-  🔥 High Priority
-</h2>
-
-{highPriorityTask ? (
-  <>
-    <p className="mt-3 text-lg font-medium">
-      {highPriorityTask.title}
-    </p>
-
-    <p className="mt-2 text-slate-600">
-      {highPriorityTask.notes}
-    </p>
-
-    <div className="mt-4 text-sm text-slate-500">
-      <p>Owner: {highPriorityTask.owner}</p>
-
-      {highPriorityTask.dueDate && (
-        <p>
-          Due: {highPriorityTask.dueDate.toLocaleDateString()}
-        </p>
-      )}
-    </div>
-  </>
-) : (
-  <p className="mt-3 text-slate-500">
-    No high priority tasks.
-  </p>
-)}
-      </div>
+      <HomeTaskPanel homeId={id} />
 
       <div className="mt-8 rounded-xl border bg-white p-6 shadow-sm">
   <h2 className="text-xl font-semibold">
