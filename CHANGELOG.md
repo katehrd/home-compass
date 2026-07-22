@@ -83,3 +83,15 @@
 ### Changed
 - Moved task rendering into reusable `HomeTaskPanel`
 - Removed duplicate task lookup logic from `HomeDetailPage`
+
+## Sprint 7 - Task Management
+
+### Added
+- Added reusable `TaskCard` component
+- Home Detail page now displays all tasks for a home
+- Added interactive task status controls to each task
+
+### Changed
+- Renamed `HomeTaskPanel` to `HomeTasksPanel`
+- Replaced the single High Priority view with a complete task list
+- Improved task visibility to reduce duplicate task creation

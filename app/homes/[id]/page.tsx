@@ -1,4 +1,4 @@
-import HomeTaskPanel from "@/components/home/HomeTaskPanel";
+import HomeTasksPanel from "@/components/home/HomeTasksPanel";
 import HomeJourney from "@/components/home/HomeJourney";
 import { homes } from "@/data/homes";
 import StatusBadge from "@/components/shared/StatusBadge";
@@ -44,7 +44,7 @@ export default async function HomeDetailPage({
 
 </div>
 
-      <HomeTaskPanel homeId={id} />
+      <HomeTasksPanel homeId={id} />
 
       <div className="mt-8 rounded-xl border bg-white p-6 shadow-sm">
   <h2 className="text-xl font-semibold">
