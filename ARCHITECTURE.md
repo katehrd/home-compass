@@ -264,3 +264,25 @@ Calendar dates (e.g. task due dates) should be created with:
 new Date(year, monthIndex, day)
 
 instead of ISO date strings to avoid UTC timezone shifts.
+
+## Design Principle: Importance vs. Timing
+
+Home Compass distinguishes between priority (how important a task is to the home-buying process) and urgency (how soon the user needs to act). Priority is assigned by the user. Urgency is derived from due dates and current time. The interface should help users understand both dimensions at a glance.
+
+## Action-Oriented Language
+
+The interface should communicate in terms of decisions and actions rather than raw data.
+
+Prefer:
+
+- Needs Attention
+- Next Action
+- Due Tomorrow
+
+over:
+
+- Priority
+- Due Date
+- Status
+
+The application should guide users toward their next step rather than simply describing the current state.

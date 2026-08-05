@@ -11,41 +11,55 @@ export default function TaskCard({
   onStatusChange,
 }: TaskCardProps) {
   return (
-    <div className="rounded-lg border p-4">
-      <div className="flex items-center gap-2">
-        {task.priority === "High" && (
-          <span>🔥</span>
-        )}
+    <div className="rounded-xl border bg-white p-6 shadow-sm">
 
-        <h3 className="font-semibold">
-          {task.title}
-        </h3>
-      </div>
+  <p className="text-sm font-semibold text-amber-600">
+    🟠 Due Tomorrow
+  </p>
 
-      {task.notes && (
-        <p className="mt-2 text-slate-600">
-          {task.notes}
-        </p>
-      )}
+  <h3 className="mt-3 text-xl font-semibold">
+    {task.title}
+  </h3>
 
-      <div className="mt-4 text-sm text-slate-500 space-y-1">
-        <p>Owner: {task.owner}</p>
+  <div className="mt-3">
+    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+      {task.priority} Priority
+    </span>
+  </div>
 
-        {task.dueDate && (
-          <p>
-            Due: {task.dueDate.toLocaleDateString()}
-          </p>
-        )}
+  <div className="mt-5 space-y-2 text-sm text-slate-600">
 
-        <p>Priority: {task.priority}</p>
-      </div>
+    {task.dueDate && (
+      <p>
+        📅 {task.dueDate.toLocaleDateString()}
+      </p>
+    )}
 
-      <div className="mt-4">
-        <TaskStatusSelect
-          value={task.status}
-          onChange={onStatusChange}
-        />
-      </div>
+    <p>
+      👤 {task.owner}
+    </p>
+
+  </div>
+
+      <div className="mt-6">
+
+  <p className="mb-2 text-sm font-medium text-slate-700">
+    Status
+  </p>
+
+  <TaskStatusSelect
+    value={task.status}
+    onChange={onStatusChange}
+  />
+
+  {task.notes && (
+  <div className="mt-6 border-t pt-4">
+    <p className="text-sm text-slate-600">
+      {task.notes}
+    </p>
+  </div>
+)}
+</div>
     </div>
   );
 }
