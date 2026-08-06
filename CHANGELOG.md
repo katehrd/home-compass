@@ -95,3 +95,14 @@
 - Renamed `HomeTaskPanel` to `HomeTasksPanel`
 - Replaced the single High Priority view with a complete task list
 - Improved task visibility to reduce duplicate task creation
+
+## Sprint 7 – Story 2.5
+
+### Added
+- Added `getUrgency()` utility for calculating task urgency.
+- Added urgency color mapping.
+- Replaced hardcoded urgency labels with calculated values.
+
+### Changed
+- Task cards now display urgency based on due dates.
+- Added product principles for urgency colors and planning states.

@@ -1,5 +1,9 @@
 import { Task } from "@/types/task";
 import TaskStatusSelect from "./TaskStatusSelect";
+import {
+  getUrgency,
+  getUrgencyColorClass,
+} from "@/lib/taskUtils";
 
 interface TaskCardProps {
   task: Task;
@@ -10,12 +14,23 @@ export default function TaskCard({
   task,
   onStatusChange,
 }: TaskCardProps) {
+
+  const urgency = getUrgency(task);
+
   return (
     <div className="rounded-xl border bg-white p-6 shadow-sm">
 
-  <p className="text-sm font-semibold text-amber-600">
-    🟠 Due Tomorrow
-  </p>
+  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+  Next Action
+</p>
+
+<p
+  className={`mt-1 text-sm font-semibold ${getUrgencyColorClass(
+    urgency.color
+  )}`}
+>
+  {urgency.label}
+</p>
 
   <h3 className="mt-3 text-xl font-semibold">
     {task.title}

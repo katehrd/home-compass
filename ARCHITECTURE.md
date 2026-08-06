@@ -286,3 +286,19 @@ over:
 - Status
 
 The application should guide users toward their next step rather than simply describing the current state.
+
+### Time-Based Color System
+
+Task colors communicate urgency and planning status.
+
+🔴 Overdue — Recovery required
+
+🟠 Due Today — Immediate attention
+
+🟡 Due Tomorrow — Prepare now
+
+🟢 Due This Week — Upcoming
+
+🔵 Future Scheduled — Planned
+
+⚪ No Due Date — Needs planning

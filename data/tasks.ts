@@ -10,7 +10,7 @@ export const tasks: Task[] = [
   owner: "Kate",
   priority: "Medium",
   notes: "Reviewed photos and disclosures.",
-  completedDate: new Date(2026, 6, 10),
+  completedDate: new Date(2026, 7, 10),
 },
 {
   id: "tour-crawford",
@@ -21,7 +21,7 @@ export const tasks: Task[] = [
   owner: "Dan",
   priority: "High",
   notes: "No upcoming open houses. Need to schedule a private tour.",
-  dueDate: new Date(2026, 6, 14),
+  dueDate: new Date(2026, 7, 6),
 },
 {
   id: "drive-broadfield",
@@ -32,7 +32,7 @@ export const tasks: Task[] = [
   owner: "Kate",
   priority: "Medium",
   notes: "Need to drive through the neighborhood to get a feel for the area.",
-  dueDate: new Date(2026, 6, 20),
+  dueDate: new Date(2026, 7, 20),
 },
 {
   id: "realtor-wilmot",
@@ -43,7 +43,7 @@ export const tasks: Task[] = [
   owner: "Kate",
   priority: "High",
   notes: "Need to call the assigned realtor to discuss the property.",
-  dueDate: new Date(2026, 6, 23),
+  dueDate: new Date(2026, 7, 7),
 },
 {
   id: "review-cherry",
